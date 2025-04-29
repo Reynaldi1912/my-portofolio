@@ -37,6 +37,45 @@
     }
 
   </style>
+  <style>
+    .scrolling-text-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .scrolling-text {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #003cff; /* Warna biru menarik */
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+        text-align: center; /* Menyelaraskan teks di tengah */
+        border-right: 4px solid #0389ff; /* Menambahkan garis kursor */
+        width: 0; /* Mulai dari ukuran 0 untuk efek pengetikan */
+        animation: typing 4s steps(30) 1s 1 normal both, blink 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
+
+    @keyframes blink {
+        50% {
+            border-color: transparent;
+        }
+    }
+    
+</style>
+
   <title>Portofolio - Reynaldi Ramadhani Eka Purnomo</title>
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
 </head>
@@ -62,7 +101,7 @@
   <nav class="site-nav dark mb-5 site-navbar-target">
     <div class="container">
       <div class="site-navigation">
-        <a href="index.html" class="logo m-0">Rey.Portofolio<span class="text-primary"></span></a>
+        <a href="index.html" class="logo m-0">Devreynaldi<span class="text-primary"></span></a>
 
         <ul class="js-clone-nav d-none d-lg-inline-none site-menu float-right site-nav-wrap">
           <li><a href="#home-section" class="nav-link active">Home</a></li>
@@ -82,36 +121,39 @@
 
   <div class="row p-5 text-center bg-white">
     <!-- Animation section (hidden on mobile) -->
-     <div class="col-xl-6 col-sm-12 hide-on-mobile">
-       <div class="d-flex justify-content-end align-items-end">
-         <dotlottie-player src="/images/assets/json/dashboard.json" background="transparent" speed="1" style="width:80%" loop autoplay></dotlottie-player>
-       </div>
-     </div>
-    
-  
+    <div class="col-xl-6 col-sm-12 hide-on-mobile">
+      <div class="d-flex justify-content-center align-items-center" style="height: 100%;">
+        <div class="scrolling-text">
+          &lt;/ Hello World  &gt;
+          <br>
+          &lt; I'm Fullstack Developer /&gt;
+      </div>
+      
+      </div>
+  </div>
+
     <!-- Text and Profile Info Section -->
     <div class="col-xl-6 col-sm-12 d-flex justify-content-start align-items-start">
-      <div class="section" id="about-section">
-        <div class="row justify-content-center mb-3">
-          <div class="col-lg-7 text-center author-wrap">
-            <h3 class="h5 text-black font-weight-bold mb-2 gsap-reveal-hero">Reynaldi Ramadhani Eka Purnomo</h3>
-            <p class="gsap-reveal-hero">Fullstack Developer</p>
-          </div>
+        <div class="section" id="about-section">
+            <div class="row justify-content-center mb-3">
+                <div class="col-lg-7 text-center author-wrap">
+                    <h3 class="h5 text-black font-weight-bold mb-2 gsap-reveal-hero">Reynaldi Ramadhani Eka Purnomo</h3>
+                </div>
+            </div>
+
+            <!-- Centered Paragraph Text -->
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <p class="subheading gsap-reveal-hero mb-4 text-center">
+                        I am a dedicated Fullstack Developer with extensive experience in developing web and mobile applications. 
+                        With experience working in cross-functional teams, I can design, develop, and implement new features, as well as enhance application performance and scalability. 
+                        I am always eager to learn new technologies and collaborate to solve complex challenges.
+                    </p>
+                </div>
+            </div>
         </div>
-  
-        <!-- Centered Paragraph Text -->
-        <div class="row justify-content-center">
-          <div class="col-lg-7">
-            <p class="subheading gsap-reveal-hero mb-4 text-center">
-              I am a dedicated Fullstack Developer with extensive experience in developing web and mobile applications. 
-              With experience working in cross-functional teams, I can design, develop, and implement new features, as well as enhance application performance and scalability. 
-              I am always eager to learn new technologies and collaborate to solve complex challenges.
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
+</div>
   
   
 
@@ -209,7 +251,7 @@
                 <span class="wrap-icon icon-link2"></span>
                 <div class="portfolio-item-content">
                   <h3>Exam Super Apps</h3>
-                  <p>Web, FUllstack Developer</p>
+                  <p>Web, Fullstack Developer</p>
                 </div>
               </div>
               <img src="images/assets/exam-super-apps.png" class="lazyload  img-fluid" alt="Images" />
@@ -271,95 +313,75 @@
 
         </div>
       </div>
-
-
-        <!-- </div>
-        </div> -->
       </div>
     </div>
 
 
-    <div class="section" id="skill-section"></div>
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-lg-7 text-center mx-auto">
-            <h2 class="section-heading gsap-reveal-hero mb-0"><strong>Skills</strong></h2>
-            <p class="gsap-reveal-hero">Skill On Development Apps</p>
+    <br>
+   <!-- Tambahkan link ke CDN Font Awesome di bagian <head> -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
-            <div class="wave gsap-reveal-hero" >
-              <svg>
-                <path d="M10,10 L50,100 L90,50" stroke="#0389ff" stroke-width="2"></path>
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="">
-          <!-- <dotlottie-player class="thumb" src="/images/assets/json/mobile.json" background="transparent" speed="1"  style="max-width: 200px;" loop autoplay></dotlottie-player> -->
-        </div>
-        <div class="row justify-content-center ml-2">
-        
-          <div class="col-6 col-sm-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-            <div class="post-entry">
-              <!-- <dotlottie-player class="thumb" src="/images/assets/json/mobile.json" background="transparent" speed="1"  style="max-width: 200px;" loop autoplay></dotlottie-player> -->
-              <h3><a href="#">Frontend & Mobile</a></h3>
-              <div class="post-meta">
-                <ul>
-                  <li>React</li>
-                  <li>Vue</li>
-                  <li>Flutter</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-6 col-sm-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-            <div class="post-entry">
-              <!-- <dotlottie-player class="thumb" src="/images/assets/json/backend.json" background="transparent" speed="1"  style="max-width: 250px;" loop autoplay></dotlottie-player> -->
-              <h3><a href="#">Backend</a></h3>
-              <div class="post-meta">
-                <ul>
-                  <li>Laravel</li>
-                  <li>Codeigniter</li>
-                  <li>Gin (Go)</li>
-                  <li>Echo (Go)</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-
-          <div class="col-6 col-sm-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-            <div class="post-entry">
-              <!-- <dotlottie-player class="thumb" src="/images/assets/json/database.json" background="transparent" speed="1"  style="max-width: 250px;" loop autoplay></dotlottie-player> -->
-              <h3><a href="#">Databases</a></h3>
-              <div class="post-meta">
-                <ul>
-                  <li>MySql</li>
-                  <li>PostgreSql</li>
-                  <li>Oracle</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-6 col-sm-6 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-            <div class="post-entry">
-              <!-- <dotlottie-player class="thumb" src="/images/assets/json/langage.json" background="transparent" speed="1" style="max-width: 250px;" loop autoplay></dotlottie-player> -->
-              <h3><a href="#">Programming Language</a></h3>
-              <div class="post-meta">
-                <ul>
-                  <li>PHP</li>
-                  <li>Javascript</li>
-                  <li>Dart</li>
-                  <li>Java</li>
-                  <li>Golang</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="col-lg-8 mx-auto">
+  <div class="card shadow rounded-4">
+    <div class="card-body text-center">
+      <h5 class="card-title text-primary mb-4" style="font-size: 2rem;">Development Stack</h5>
+      <ul class="list-inline mb-0">
+        <li class="list-inline-item badge bg-light text-dark border m-2" style="font-size: 1.2rem;">
+          <i class="fab fa-react"></i> React
+        </li>
+        <li class="list-inline-item badge bg-light text-dark border m-2" style="font-size: 1.2rem;">
+          <i class="fab fa-vuejs"></i> Vue
+        </li>
+        <li class="list-inline-item badge bg-light text-dark border m-2" style="font-size: 1.2rem;">
+          <i class="fas fa-mobile-alt"></i> Flutter
+        </li>
+        <li class="list-inline-item badge bg-light text-dark border m-2" style="font-size: 1.2rem;">
+          <i class="fab fa-laravel"></i> Laravel
+        </li>
+        <li class="list-inline-item badge bg-light text-dark border m-2" style="font-size: 1.2rem;">
+          <i class="fab fa-php"></i> CodeIgniter
+        </li>
+        <li class="list-inline-item badge bg-light text-dark border m-2" style="font-size: 1.2rem;">
+          <i class="fab fa-golang"></i> Gin (Go)
+        </li>
+        <li class="list-inline-item badge bg-light text-dark border m-2" style="font-size: 1.2rem;">
+          <i class="fas fa-cogs"></i> Echo (Go)
+        </li>
+        <li class="list-inline-item badge bg-light text-dark border m-2" style="font-size: 1.2rem;">
+          <i class="fab fa-node"></i> Express JS
+        </li>
+        <li class="list-inline-item badge bg-light text-dark border m-2" style="font-size: 1.2rem;">
+          <i class="fas fa-database"></i> MySQL
+        </li>
+        <li class="list-inline-item badge bg-light text-dark border m-2" style="font-size: 1.2rem;">
+          <i class="fas fa-database"></i> PostgreSQL
+        </li>
+        <li class="list-inline-item badge bg-light text-dark border m-2" style="font-size: 1.2rem;">
+          <i class="fas fa-database"></i> Oracle
+        </li>
+        <li class="list-inline-item badge bg-light text-dark border m-2" style="font-size: 1.2rem;">
+          <i class="fab fa-php"></i> PHP
+        </li>
+        <li class="list-inline-item badge bg-light text-dark border m-2" style="font-size: 1.2rem;">
+          <i class="fab fa-js-square"></i> JavaScript
+        </li>
+        <li class="list-inline-item badge bg-light text-dark border m-2" style="font-size: 1.2rem;">
+          <i class="fas fa-code"></i> Dart
+        </li>
+        <li class="list-inline-item badge bg-light text-dark border m-2" style="font-size: 1.2rem;">
+          <i class="fab fa-java"></i> Java
+        </li>
+        <li class="list-inline-item badge bg-light text-dark border m-2" style="font-size: 1.2rem;">
+          <i class="fab fa-golang"></i> Golang
+        </li>
+        <li class="list-inline-item badge bg-light text-dark border m-2" style="font-size: 1.2rem;">
+          <i class="fab fa-js-square"></i> Express JS
+        </li>
+      </ul>
     </div>
+  </div>
+</div>
+
 
 
     <div class="container bg-dark text-white p-3"  id="contact-section">
